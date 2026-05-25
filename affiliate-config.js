@@ -38,12 +38,11 @@
       }, 3000);
     }
 
-    // Open modal on CTA click (fallback)
+    // CTA buttons → direct affiliate link (NO modal)
     document.querySelectorAll('[data-open-modal]').forEach(function(btn) {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
-        modal.classList.add('active');
-        overlay.classList.add('active');
+        goToOffer('default');
       });
     });
 

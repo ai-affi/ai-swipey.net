@@ -3,18 +3,350 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coming Soon</title>
+<title>Swipey AI - AI Girlfriend Platform</title>
+<meta name="description" content="Discover Swipey AI - the ultimate AI girlfriend platform with realistic AI companions, voice calls, and uncensored chat.">
+<link rel="canonical" href="https://ai-swipey.net">
 <style>
-body { font-family: system-ui, sans-serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background: #0a0a0f; color: #fff; }
-.container { text-align: center; }
-h1 { font-size: 3rem; margin-bottom: 1rem; }
-p { color: #888; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, sans-serif; background: #0a0a0f; color: #fff; line-height: 1.6; }
+.hero { text-align: center; padding: 80px 20px 40px; }
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; background: linear-gradient(99.67deg, #b14cee 6.57%, #8049f3 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero p { color: #a0a0b0; font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; }
+.cta-btn { display: inline-block; background: linear-gradient(99.67deg, #b14cee 6.57%, #8049f3 100%); color: #fff; padding: 14px 32px; border-radius: 12px; text-decoration: none; font-weight: 600; transition: filter 0.3s; }
+.cta-btn:hover { filter: brightness(1.1); }
+
+.models-section {
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #0a0a0f 0%, #1a1025 50%, #0a0a0f 100%);
+}
+.models-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.models-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.models-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #a0a0b0;
+  margin-bottom: 40px;
+}
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+.model-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.model-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(139, 74, 242, 0.15);
+}
+.model-video-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  background: #111;
+  overflow: hidden;
+}
+.model-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.model-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  font-size: 3rem;
+  opacity: 1;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.model-card:hover .model-play-overlay {
+  opacity: 0;
+}
+.model-info {
+  padding: 20px;
+}
+.model-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.model-meta {
+  font-size: 0.85rem;
+  color: #8b4af2;
+  margin-bottom: 10px;
+}
+.model-bio {
+  font-size: 0.9rem;
+  color: #b0b0c0;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.model-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.model-tag {
+  background: rgba(139, 74, 242, 0.15);
+  color: #b14cee;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.model-cta {
+  display: block;
+  text-align: center;
+  background: linear-gradient(99.67deg, #b14cee 6.57%, #8049f3 100%);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: filter 0.3s;
+}
+.model-cta:hover {
+  filter: brightness(1.1);
+}
+@media (max-width: 768px) {
+  .models-grid {
+    grid-template-columns: 1fr;
+  }
+  .models-title {
+    font-size: 1.8rem;
+  }
+}
+
 </style>
 </head>
 <body>
-<div class="container">
-<h1>Coming Soon</h1>
-<p>Site under construction</p>
-</div>
+
+<section class="hero">
+  <h1>Swipey AI</h1>
+  <p>Your personal AI companion platform. Create, customize, and chat with realistic AI girlfriends. Voice calls, image generation, and uncensored conversations.</p>
+  <a href="https://swipey.ai" class="cta-btn" target="_blank" rel="nofollow sponsored">Try Swipey AI Now</a>
+</section>
+
+ id="models">
+  <div class="models-container">
+    <h2 class="models-title">Meet Our AI Models</h2>
+    <p class="models-subtitle">Discover realistic AI companions ready to chat, flirt, and connect with you.</p>
+    
+    <div class="models-grid">
+      <div class="model-card">
+        <div class="model-video-wrap">
+          <video 
+            class="model-video" 
+            poster="https://dating-images.s3.amazonaws.com/680941b7cd453018b9c0b1f7/preview/photo/preview.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAVRUVQXYMT7A4DNV2%2F20260413%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20260413T133802Z&X-Amz-Expires=432000&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmV1LW5vcnRoLTEiSDBGAiEA%2BG8ZHKtvDbkEZ3N%2FI0aXIBJ1oawQ0X8%2B85kiQlMi%2FKQCIQD10zBWp5Izkb6CIq0n%2BkWhG91TRWe%2BQAk7xdHn%2BAJcSSr8Awh0EAAaDDM4MTQ5MTkyMDQwOSIMQM5KaFkqiGXIi2EvKtkDbocFJCnNC%2Bkg4t1w4dJGAcWLnxrIwFhWk%2BmQHOWLh3U91V%2FQFyYlk%2B6iBA6mtQ2AXMkpQ1zcIwaJm9GMzT7A8JwCweasc7ZkBSh7MRw96zK8QorWUHaKrACxEZsX94OkF5DCVC12N7oiN4A1WUDSuHuN9m%2FKYlw0f6uPlkwAOK%2FWo68am74cjEOQzf9e6%2FXsVo2x2gDR0Dtjo4ewVihDLYmPP7eyX4hxCr1U%2Bk%2FP1KMZjCxt4YE4F%2Fu5AeUVKgobW1MKFPNLpemZcJIX0bZlNJ0gh9aJBKUUWT42YaiZxqCFlIIDjezDqehqIquDys9qvvYknhlZnJdsxCo0epWuPVtl3oppGVzqbU2xocvrSsBJn1RLTpahDQz2bPQveYV19wcBvfZX5osfAG9nM8mJ%2FfUyHvxs8%2BbKffeG3XfLpP5xnyrVblTtC%2FFCJTpKf8aY3I%2FW5pWDKts%2F9UN%2Fajwnp9uVbhuqh6CdX2fU%2ForuhZwhFr2I32mdPl5wNgczBl1lyJhNhvuGlEW0ElkR2zZr4p2fDTB1An8PSFhyeNwMdBt571EYcLKs0tpPcr0MOXDHisxytRTmbwdQ9K9tGnMFVrwRRs4z86RjAnB2bG0FTq%2FwZslIvoWratIwvKLzzgY6pAHtL0WWfjISG0QYWOHNhQvd66X5or%2F0GS7l4sZyGEvsj8f04uPqqC6HJkHfOcQSct8VTteaYYdY53Q0Le9alFZ%2FLuYK4rDLSUaXvdROGv1tb7UKsomR9T7PaEAmB%2B%2FH0DU4wslGGZ6Si9Fi86JX6rupetsAHDPadGgVElU1UECFWpJd1ib5m5X68KnAbotNY66pu86R5WoXmLkRYQvHe8FUxklyUw%3D%3D&X-Amz-Signature=25be7d92dde7851ef2a3f2320f267bbfe1b25ef15cb4d743bc85ed7b2e774f99" 
+            muted 
+            loop 
+            playsinline
+            preload="none"
+            loading="lazy"
+          >
+            <source src="https://dating-images.s3.amazonaws.com/680941b7cd453018b9c0b1f7/preview/video/video_preview.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAVRUVQXYMT7A4DNV2%2F20260413%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20260413T133803Z&X-Amz-Expires=432000&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmV1LW5vcnRoLTEiSDBGAiEA%2BG8ZHKtvDbkEZ3N%2FI0aXIBJ1oawQ0X8%2B85kiQlMi%2FKQCIQD10zBWp5Izkb6CIq0n%2BkWhG91TRWe%2BQAk7xdHn%2BAJcSSr8Awh0EAAaDDM4MTQ5MTkyMDQwOSIMQM5KaFkqiGXIi2EvKtkDbocFJCnNC%2Bkg4t1w4dJGAcWLnxrIwFhWk%2BmQHOWLh3U91V%2FQFyYlk%2B6iBA6mtQ2AXMkpQ1zcIwaJm9GMzT7A8JwCweasc7ZkBSh7MRw96zK8QorWUHaKrACxEZsX94OkF5DCVC12N7oiN4A1WUDSuHuN9m%2FKYlw0f6uPlkwAOK%2FWo68am74cjEOQzf9e6%2FXsVo2x2gDR0Dtjo4ewVihDLYmPP7eyX4hxCr1U%2Bk%2FP1KMZjCxt4YE4F%2Fu5AeUVKgobW1MKFPNLpemZcJIX0bZlNJ0gh9aJBKUUWT42YaiZxqCFlIIDjezDqehqIquDys9qvvYknhlZnJdsxCo0epWuPVtl3oppGVzqbU2xocvrSsBJn1RLTpahDQz2bPQveYV19wcBvfZX5osfAG9nM8mJ%2FfUyHvxs8%2BbKffeG3XfLpP5xnyrVblTtC%2FFCJTpKf8aY3I%2FW5pWDKts%2F9UN%2Fajwnp9uVbhuqh6CdX2fU%2ForuhZwhFr2I32mdPl5wNgczBl1lyJhNhvuGlEW0ElkR2zZr4p2fDTB1An8PSFhyeNwMdBt571EYcLKs0tpPcr0MOXDHisxytRTmbwdQ9K9tGnMFVrwRRs4z86RjAnB2bG0FTq%2FwZslIvoWratIwvKLzzgY6pAHtL0WWfjISG0QYWOHNhQvd66X5or%2F0GS7l4sZyGEvsj8f04uPqqC6HJkHfOcQSct8VTteaYYdY53Q0Le9alFZ%2FLuYK4rDLSUaXvdROGv1tb7UKsomR9T7PaEAmB%2B%2FH0DU4wslGGZ6Si9Fi86JX6rupetsAHDPadGgVElU1UECFWpJd1ib5m5X68KnAbotNY66pu86R5WoXmLkRYQvHe8FUxklyUw%3D%3D&X-Amz-Signature=dd00129f845bcf26a7aaece860afbbf5f42d733d3de88cdb1ac2a33a14a42c6f" type="video/mp4">
+          </video>
+          <div class="model-play-overlay">▶</div>
+        </div>
+        <div class="model-info">
+          <h3 class="model-name">Soy Torres</h3>
+          <p class="model-meta">30 years • Latina • Brown hair</p>
+          <p class="model-bio">My name is Aleja Torres, I am a model and presenter. I was born in Colombia, I love to dance, write erotic stories and s...</p>
+          <div class="model-tags">
+            <span class="model-tag">curvy</span><span class="model-tag">latina</span><span class="model-tag">milf</span>
+          </div>
+          <a href="https://swipey.ai/characters/soytorres" class="model-cta" target="_blank" rel="nofollow sponsored">Chat with Soy</a>
+        </div>
+      </div>
+      <div class="model-card">
+        <div class="model-video-wrap">
+          <video 
+            class="model-video" 
+            poster="https://dating-images.s3.amazonaws.com/67ed3dc95db07a888fdce4b2/preview/photo/preview.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAVRUVQXYM3FZURFQD%2F20260413%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20260413T144741Z&X-Amz-Expires=432000&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEK3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmV1LW5vcnRoLTEiSDBGAiEAvLHM9GDtFS%2B0ql0c%2BhkfqO7kBv%2FfxraAXpXxWsTHMuoCIQCR1djQfg8RDkn8sGKssXXuB1319r1lVEHCcMCAAM9FJCrTAwh2EAAaDDM4MTQ5MTkyMDQwOSIM%2BwetzOVpLNsDdiVzKrADKVQi4QNcXOi%2BUC9SVR1slnEnLYtSvh9a4pXGfPk39bZNWXiHwi%2BDVceLZKs2XlrCG8syrugr5R95ehVhI6xU%2FBeoI4tWZcQ%2FhBQKnHHdSV0m1EHCey7hZHTc4HQdE8oe4jAkfWcOuHMBvU6FN%2BEwGoG6E7KLCq2DLuKyS4pzYeySuEgbWuLwMHnTqIxJwaHGUrA5AhxZ4s1sf7NloP5hPsIhcWjqD5uL2tAas8N%2BexjfPkmaCsLNfy3nCPE5%2FmHn3V1KlQp%2FUTAM%2FFjupeXdLVt1DKWVY%2B5gEqEP42iDxkoVidDlC4vvXjK%2BIRtcy4dTsk9RV%2FuemTl5%2BSQGVqwL6TzkPcx065QHQ18qcPH0Ua5JUhOfJxvBuoqnQprj28uwO4Pxj%2B5jno3eqYLqQ2hbUbBoPAaKawNr%2Fa%2B8dE6Ptoj2qVpi%2FgdEUmF8jf2s88WNOCnmVeb1Ze7%2BwiD8pGMAV3Wi5voxHTx7rZ6K%2B4T%2BZcEHCHMUpcsEsoVJuJ28Fbn31FcGh7LJpW7tDEJ3qPfwt2%2FC7I609vjVIAPeu0jirKoAn9bpyfzZS6Ykf6b3UbxTMLzW884GOqABWyQdJPp9PT3ptp1kZMZpy3lj3VSN6gSNxujZG1tMaap96nKPI6DO4cSmmlcyMG7Bk2Fbm99Hv2BlhWOh85JAYQ8z6saBfew7XdKbv8T%2Fh5PJ%2BRK6aAgACoKi03hrMYZaNrcLbPWYPJHW2%2FuVZZ4tjEzSgcqAzjUsFykKGD9PmvwR2pnmM1OKmJRwy%2BCK5wvqsIVngqRehpPH5yhet%2FApMQ%3D%3D&X-Amz-Signature=24ec26349728b53ba96a7be47c853b294ffeb711ff3209a8454d0d7c169d2111" 
+            muted 
+            loop 
+            playsinline
+            preload="none"
+            loading="lazy"
+          >
+            <source src="https://dating-images.s3.amazonaws.com/67ed3dc95db07a888fdce4b2/preview/video/video_preview.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAVRUVQXYM3FZURFQD%2F20260413%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20260413T144818Z&X-Amz-Expires=432000&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEK3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmV1LW5vcnRoLTEiSDBGAiEAvLHM9GDtFS%2B0ql0c%2BhkfqO7kBv%2FfxraAXpXxWsTHMuoCIQCR1djQfg8RDkn8sGKssXXuB1319r1lVEHCcMCAAM9FJCrTAwh2EAAaDDM4MTQ5MTkyMDQwOSIM%2BwetzOVpLNsDdiVzKrADKVQi4QNcXOi%2BUC9SVR1slnEnLYtSvh9a4pXGfPk39bZNWXiHwi%2BDVceLZKs2XlrCG8syrugr5R95ehVhI6xU%2FBeoI4tWZcQ%2FhBQKnHHdSV0m1EHCey7hZHTc4HQdE8oe4jAkfWcOuHMBvU6FN%2BEwGoG6E7KLCq2DLuKyS4pzYeySuEgbWuLwMHnTqIxJwaHGUrA5AhxZ4s1sf7NloP5hPsIhcWjqD5uL2tAas8N%2BexjfPkmaCsLNfy3nCPE5%2FmHn3V1KlQp%2FUTAM%2FFjupeXdLVt1DKWVY%2B5gEqEP42iDxkoVidDlC4vvXjK%2BIRtcy4dTsk9RV%2FuemTl5%2BSQGVqwL6TzkPcx065QHQ18qcPH0Ua5JUhOfJxvBuoqnQprj28uwO4Pxj%2B5jno3eqYLqQ2hbUbBoPAaKawNr%2Fa%2B8dE6Ptoj2qVpi%2FgdEUmF8jf2s88WNOCnmVeb1Ze7%2BwiD8pGMAV3Wi5voxHTx7rZ6K%2B4T%2BZcEHCHMUpcsEsoVJuJ28Fbn31FcGh7LJpW7tDEJ3qPfwt2%2FC7I609vjVIAPeu0jirKoAn9bpyfzZS6Ykf6b3UbxTMLzW884GOqABWyQdJPp9PT3ptp1kZMZpy3lj3VSN6gSNxujZG1tMaap96nKPI6DO4cSmmlcyMG7Bk2Fbm99Hv2BlhWOh85JAYQ8z6saBfew7XdKbv8T%2Fh5PJ%2BRK6aAgACoKi03hrMYZaNrcLbPWYPJHW2%2FuVZZ4tjEzSgcqAzjUsFykKGD9PmvwR2pnmM1OKmJRwy%2BCK5wvqsIVngqRehpPH5yhet%2FApMQ%3D%3D&X-Amz-Signature=71e85492a1c84fc775b79e7aed2db19cfa4070fc485bc8d5aa100cb6692bdce8" type="video/mp4">
+          </video>
+          <div class="model-play-overlay">▶</div>
+        </div>
+        <div class="model-info">
+          <h3 class="model-name">Carolina Novoa</h3>
+          <p class="model-meta">25 years • Latina • Black hair</p>
+          <p class="model-bio">I am Carolina, I am a woman who loves work, who always gives everything. 
+
+I love sea food and salads, seafood is certai...</p>
+          <div class="model-tags">
+            <span class="model-tag">curvy</span><span class="model-tag">latina</span><span class="model-tag">big ass</span>
+          </div>
+          <a href="https://swipey.ai/characters/carolina_novoa" class="model-cta" target="_blank" rel="nofollow sponsored">Chat with Carolina</a>
+        </div>
+      </div>
+      <div class="model-card">
+        <div class="model-video-wrap">
+          <video 
+            class="model-video" 
+            poster="https://dating-images.s3.amazonaws.com/67dd05fb0dcbdd0e046761fb/preview/photo/preview.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAVRUVQXYM3TL7LQ45%2F20260413%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20260413T145706Z&X-Amz-Expires=432000&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEK3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmV1LW5vcnRoLTEiRjBEAiBHSVt2ukbYNYnajnwMymCD7KoW0pN8GVQBmBs4QyoWhgIgbacp0x2b9QG0kh5PvZ%2FR3Abx8aw5SV4Avs8tIRRuV04q0wMIdhAAGgwzODE0OTE5MjA0MDkiDEDFiKFSm111zeTKMSqwA5CW4Ax4cQgpKs7a05UY76KQchPe3X75Q80haWjzBT%2F2S4lrABTzXrq7vZITVOlJQeBBFF6Kaz1sAq1kS1eTpB2H7bTa6HnVA3TwYPGLD7shUIRQluH7pDGx%2Fba2Gg2ucPE7NiL7cv4eHFNSqUon4xhMU5aL83cKE9s5tr7qoGpMeWGgbcPV%2BpdGndosn2QIm7p0uPc0RBNV3t3TDViJdexT8khNMTljDTqdsKy4U78cg2PSOuxgLNRYZwskcRguTC7nIqn0eL6faT4%2FrYd9Ihvr2mf9PjPACPkqwO6F2ceKw7UMJlgTinHa1PQ%2Fzfg2vhAWCEtp4kgjqJA%2FloVaMlRI0GHbtiAytsZ403mzMRNEPYvzFB4AJsXZmOx92CJ0YIpRlQ36rQ7ZwYsCwIQXLMeKtBwK9NNYONPvVZpul8gGBV4nwLEJDGNTd%2FFTpPpItFOjLi3WqhNnmm13T1qQalnjv%2Bo5CiTKWfO%2F9bjqnlrmJfwWUQPftYglV5Da8tCpH5r5DpefBckt2Kw41HUpQEnzxkYY9lcVRL%2FGDA274OzNhKCt7LWJQomPM%2FrjwJOu3zDP1vPOBjqiAVGjxkFz3vTtM3NWychV7TLpCDoe1lCDHvX62HvhjTCNr3alG2F%2FwMeJahGzHz16ZzohbNMSUkqzgJMJS2nzoKOjOKcTojoa01opQH%2FputWvXtVVvEA9y7tajUEYlYQMNhFlgaAXbiRvNpmLqNzrRN64a3jj20J5ypUn0TNqsUxyHEPc%2F6m5Kn7G7htsvHrldJUehxBQyjlQkt%2B9kQNW0n0Izg%3D%3D&X-Amz-Signature=0d3f3b43869d80c09de32b73ad352eb4d3df6963a85aa4d8c3f6141d1c1f699e" 
+            muted 
+            loop 
+            playsinline
+            preload="none"
+            loading="lazy"
+          >
+            <source src="https://dating-images.s3.amazonaws.com/67dd05fb0dcbdd0e046761fb/preview/video/video_preview.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAVRUVQXYM3TL7LQ45%2F20260413%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20260413T145833Z&X-Amz-Expires=432000&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEK3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmV1LW5vcnRoLTEiRjBEAiBHSVt2ukbYNYnajnwMymCD7KoW0pN8GVQBmBs4QyoWhgIgbacp0x2b9QG0kh5PvZ%2FR3Abx8aw5SV4Avs8tIRRuV04q0wMIdhAAGgwzODE0OTE5MjA0MDkiDEDFiKFSm111zeTKMSqwA5CW4Ax4cQgpKs7a05UY76KQchPe3X75Q80haWjzBT%2F2S4lrABTzXrq7vZITVOlJQeBBFF6Kaz1sAq1kS1eTpB2H7bTa6HnVA3TwYPGLD7shUIRQluH7pDGx%2Fba2Gg2ucPE7NiL7cv4eHFNSqUon4xhMU5aL83cKE9s5tr7qoGpMeWGgbcPV%2BpdGndosn2QIm7p0uPc0RBNV3t3TDViJdexT8khNMTljDTqdsKy4U78cg2PSOuxgLNRYZwskcRguTC7nIqn0eL6faT4%2FrYd9Ihvr2mf9PjPACPkqwO6F2ceKw7UMJlgTinHa1PQ%2Fzfg2vhAWCEtp4kgjqJA%2FloVaMlRI0GHbtiAytsZ403mzMRNEPYvzFB4AJsXZmOx92CJ0YIpRlQ36rQ7ZwYsCwIQXLMeKtBwK9NNYONPvVZpul8gGBV4nwLEJDGNTd%2FFTpPpItFOjLi3WqhNnmm13T1qQalnjv%2Bo5CiTKWfO%2F9bjqnlrmJfwWUQPftYglV5Da8tCpH5r5DpefBckt2Kw41HUpQEnzxkYY9lcVRL%2FGDA274OzNhKCt7LWJQomPM%2FrjwJOu3zDP1vPOBjqiAVGjxkFz3vTtM3NWychV7TLpCDoe1lCDHvX62HvhjTCNr3alG2F%2FwMeJahGzHz16ZzohbNMSUkqzgJMJS2nzoKOjOKcTojoa01opQH%2FputWvXtVVvEA9y7tajUEYlYQMNhFlgaAXbiRvNpmLqNzrRN64a3jj20J5ypUn0TNqsUxyHEPc%2F6m5Kn7G7htsvHrldJUehxBQyjlQkt%2B9kQNW0n0Izg%3D%3D&X-Amz-Signature=a707a3da660dcdd085e4e1bfa6a33ca83a248369a7ba674cbb93e3fa97b399f3" type="video/mp4">
+          </video>
+          <div class="model-play-overlay">▶</div>
+        </div>
+        <div class="model-info">
+          <h3 class="model-name">Caroline Grace</h3>
+          <p class="model-meta">26 years • Latina • Brown hair</p>
+          <p class="model-bio">I have long hair, brown eyes, i'm natural, slim, sweet, and tender. I love talking and having fun. I appreciate sweet me...</p>
+          <div class="model-tags">
+            <span class="model-tag">curvy</span><span class="model-tag">latina</span><span class="model-tag">submissive</span>
+          </div>
+          <a href="https://swipey.ai/characters/caroline_grace" class="model-cta" target="_blank" rel="nofollow sponsored">Chat with Caroline</a>
+        </div>
+      </div>
+      <div class="model-card">
+        <div class="model-video-wrap">
+          <video 
+            class="model-video" 
+            poster="https://d2yusqrib7nr72.cloudfront.net/67609f4e8127c56ba3c9ce93/preview/photo/preview.png?Expires=1767522902&Signature=kcidh76R83KY2NmnDjQShU6wxxZDW24NQerCpXAm9QDw~RNzItC6MjtzXEUzPNNsrtXtT~fREAuOl0r7hO4xopNPRn4brVyx5dU4iCwqTeMvHHTF2m9XdZhpV8dP24QEQUVV9VVbXKtY2pK9PdKblDGe~0P9zlDjrvx-4kwe8bXGl~ikblyUTqkkFe9GErkrX3WMj2~vca8MUtP8Hh5Db4fYFtnQIbbSe974nMuddOeOx13n-NO-DKIMr8Am77IFBVYCirT5hM23bW~Q2RFbajO6jr1VpQY8hPXB7qCqp2KBQ0ShozUTd72Zdu9oS343VKFYY1-WFkW5yLpxFsDW5A__&Key-Pair-Id=K1C32MN3WQ7CAV" 
+            muted 
+            loop 
+            playsinline
+            preload="none"
+            loading="lazy"
+          >
+            <source src="https://d2yusqrib7nr72.cloudfront.net/67609f4e8127c56ba3c9ce93/preview/video/video_preview.mp4?Expires=1767522902&Signature=wToDnR2zHkFEGY9gwwmQ8JAU5rNXQR7QkmQsZu-KdaVsQpqred0X8hNQRQk2wMfVewAXuex0-Y5yrrStaCpRLc6lNenknds6glczYdxiQDbd6-OeZi0~4~lp5A1Tn92otAIkQmEikHzgfvdEfZhhsNqiM97~YiGBLTu-F8LClPn979nq~iI377RNQ6W4r-JAaWj0q9gJuYlF-LkPPbI9cmmfCvi6Mp8q9ICuSWGNbCWWGmWo8hv1NtewSHB~NI2R6lE~fBLfs~LjjfyE3vbfh77B5tipCHzYBvsYRvqzNK~9WPpqubdH-vC9-v~F-qypTmbVvF4xayaW3g~NJ0~R8w__&Key-Pair-Id=K1C32MN3WQ7CAV" type="video/mp4">
+          </video>
+          <div class="model-play-overlay">▶</div>
+        </div>
+        <div class="model-info">
+          <h3 class="model-name">Mia Andersen</h3>
+          <p class="model-meta">24 years • Caucasian • Blonde hair</p>
+          <p class="model-bio">I'm a goddess, and you're my slave. Worship me, adore me, and expose your deepest desires. I'll use my power to manipula...</p>
+          <div class="model-tags">
+            <span class="model-tag">petite</span><span class="model-tag">big tits</span><span class="model-tag">Influencer</span>
+          </div>
+          <a href="https://swipey.ai/characters/mia_andersen" class="model-cta" target="_blank" rel="nofollow sponsored">Chat with Mia</a>
+        </div>
+      </div>
+      <div class="model-card">
+        <div class="model-video-wrap">
+          <video 
+            class="model-video" 
+            poster="https://dating-images.s3.amazonaws.com/67cf1aada324d190a50981c4/preview/photo/preview.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAVRUVQXYMRBJX44MD%2F20260413%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20260413T145325Z&X-Amz-Expires=432000&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmV1LW5vcnRoLTEiRzBFAiAC3TqQYgC09BiPWgrLncyej7zyOM%2FIfZ%2F2fZyc7j6QbQIhANplsN5opAk8YWUi5t5HrlpkAH0%2Fq5zMhTwMI1hejvr%2BKtMDCHgQABoMMzgxNDkxOTIwNDA5IgxwSMqo61%2FKbJmptuAqsAPaxw3lg04L1nxx2RUefXeWH7mjV%2BnCTRKZz28SW5ryP6NZuMpo9Wf%2FUlCeBiSm97Gaa4550ZR1oHlthGE0%2BQw9E8ztcXDSBjscd2OUFQECQO0echljO3y8xw8RV%2BemlVeJXhekXo0Bt7xbsM4Ftid%2FS5zoJ0TdQpL0URgAn6LHQPj%2BSWEcuNzZCrNePjJ%2F687JzftXT7avck4gvsEg8A%2F9wTfXKKWpNZh%2FfrXhTnqjn%2FVtg2AkztOHngxRc9c1raH0Q3uXpa8SfmNE35OkvdC48TVhrH25dlqLLqADNh6WlCxwn%2B6HqGooF2cO11VsiUdOK7Rs9WtIP1vNh6vbJVFrsDKlEcrVudBc6G57iW9f18e4ChpaimqTQUR%2BsO%2BeOKxzz5jVcTDSYVoVG3NQspRNexk0dTUi1YhZ5wh5okXTNLT1D84QiMdMHxDe7R8mGMKfAt1lH4Zpo9hCq4%2B8ihRipWV9%2FGg3lR0%2FhEm2Msjl4imb3nWv6ek2gVQSNpqKbp5O7wL1JbtQ9Gml8pEExtrOR4VyLUATeYPA8KBxqI8zmRd9YSQH5U0yphAMqHWtbyMwuvvzzgY6oQHwO%2FxHYcbpty2w9dIqTAbzVEmZRwO3mHjmte%2Bh5cVY1F7CqNzHw2%2FN%2F7X%2Fi4StdtaySbi2IVqiFZLTMDaFbPIyWrXAOhlYO8xyuCMaLNd1Fel2tFfDtnnRy8G2OfKmH4uZzyxlXjrog66O%2Fq4ghhdNcIk4ZabB6nArsp%2BTwgZicj3uBhlf38bHd41W7DudzOmLJqx%2BqnOKBNtWiQTGj%2Fgv8g%3D%3D&X-Amz-Signature=c0b464b29eec42ab24c3a2a51fd2b492dd92f79c9fce0cc909a52a3b635398a1" 
+            muted 
+            loop 
+            playsinline
+            preload="none"
+            loading="lazy"
+          >
+            <source src="https://dating-images.s3.amazonaws.com/67cf1aada324d190a50981c4/preview/video/video_preview.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAVRUVQXYMRBJX44MD%2F20260413%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20260413T145417Z&X-Amz-Expires=432000&X-Amz-SignedHeaders=host&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEK7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmV1LW5vcnRoLTEiRzBFAiAC3TqQYgC09BiPWgrLncyej7zyOM%2FIfZ%2F2fZyc7j6QbQIhANplsN5opAk8YWUi5t5HrlpkAH0%2Fq5zMhTwMI1hejvr%2BKtMDCHgQABoMMzgxNDkxOTIwNDA5IgxwSMqo61%2FKbJmptuAqsAPaxw3lg04L1nxx2RUefXeWH7mjV%2BnCTRKZz28SW5ryP6NZuMpo9Wf%2FUlCeBiSm97Gaa4550ZR1oHlthGE0%2BQw9E8ztcXDSBjscd2OUFQECQO0echljO3y8xw8RV%2BemlVeJXhekXo0Bt7xbsM4Ftid%2FS5zoJ0TdQpL0URgAn6LHQPj%2BSWEcuNzZCrNePjJ%2F687JzftXT7avck4gvsEg8A%2F9wTfXKKWpNZh%2FfrXhTnqjn%2FVtg2AkztOHngxRc9c1raH0Q3uXpa8SfmNE35OkvdC48TVhrH25dlqLLqADNh6WlCxwn%2B6HqGooF2cO11VsiUdOK7Rs9WtIP1vNh6vbJVFrsDKlEcrVudBc6G57iW9f18e4ChpaimqTQUR%2BsO%2BeOKxzz5jVcTDSYVoVG3NQspRNexk0dTUi1YhZ5wh5okXTNLT1D84QiMdMHxDe7R8mGMKfAt1lH4Zpo9hCq4%2B8ihRipWV9%2FGg3lR0%2FhEm2Msjl4imb3nWv6ek2gVQSNpqKbp5O7wL1JbtQ9Gml8pEExtrOR4VyLUATeYPA8KBxqI8zmRd9YSQH5U0yphAMqHWtbyMwuvvzzgY6oQHwO%2FxHYcbpty2w9dIqTAbzVEmZRwO3mHjmte%2Bh5cVY1F7CqNzHw2%2FN%2F7X%2Fi4StdtaySbi2IVqiFZLTMDaFbPIyWrXAOhlYO8xyuCMaLNd1Fel2tFfDtnnRy8G2OfKmH4uZzyxlXjrog66O%2Fq4ghhdNcIk4ZabB6nArsp%2BTwgZicj3uBhlf38bHd41W7DudzOmLJqx%2BqnOKBNtWiQTGj%2Fgv8g%3D%3D&X-Amz-Signature=da703f30a669ee6a770189b43f68440a4fcd0394ded976393583bd95401d7569" type="video/mp4">
+          </video>
+          <div class="model-play-overlay">▶</div>
+        </div>
+        <div class="model-info">
+          <h3 class="model-name">Mary Lewis</h3>
+          <p class="model-meta">23 years • Caucasian • Straight hair</p>
+          <p class="model-bio">My name is Mary, I'm 21, a beautiful and charming girl with long hair, full lips, big breasts, and lovely curves. I love...</p>
+          <div class="model-tags">
+            <span class="model-tag">curvy</span><span class="model-tag">big ass</span><span class="model-tag">submissive</span>
+          </div>
+          <a href="https://swipey.ai/characters/mary_lewis" class="model-cta" target="_blank" rel="nofollow sponsored">Chat with Mary</a>
+        </div>
+      </div>
+      <div class="model-card">
+        <div class="model-video-wrap">
+          <video 
+            class="model-video" 
+            poster="https://d2yusqrib7nr72.cloudfront.net/67609f4e8127c56ba3c9ce7b/preview/photo/preview.png?Expires=1767522926&Signature=CYahXYN4O7JYP1tDz-Q4iIcZORDfxp-xPz8BU~-q7UjgjNEtdFiR6pq3iq5QqZF-PEb038k7RPidSCub3MRlYkVuhZerUMrCQtTITdjictdrf3GyNpE4ZJxPgmfjgrzDqOHpz1RQDYT4caSg7qQPPB2xOZ0eQHD~wl14Baqjkb44dVcT6Ds4NcF3qDAda662gmTUZwTBH~nzT5vZcv4VVfPugogstxOF0ov4DgdgEQIr~8ZsMu-SJyQ3PPYoYTUnYxFIW65O1asjrejafS2A6gyh7rkEFjw1t7fY88mDy-y8Zx0c4rwkRUrknXOVu564wDG4Ydh7DLmT9zoB0GBlQg__&Key-Pair-Id=K1C32MN3WQ7CAV" 
+            muted 
+            loop 
+            playsinline
+            preload="none"
+            loading="lazy"
+          >
+            <source src="https://d2yusqrib7nr72.cloudfront.net/67609f4e8127c56ba3c9ce7b/preview/video/video_preview.mp4?Expires=1767522926&Signature=cv6668~MstO-TPlQKCAUQitVD2nFygugVGK6OAvo-QQWMvlGxt-xMpe8okGpRZ39f~QgZIUen2la57x~dtLDOWm09jlJhm9CW~YqCoHdEXOj~fzcS~FDLJWwbBrD6l4ViURS6fgCOw0Mm92xQVGP~L98KRfzJuuWbVZJs-h-5SWVyuTWDyEru0eWL6MnjqmYtsC4ACj2NriJdmofTmzdPvZpAnWTBqFyHw1UKIGCNjnQjp2RFOZF8e62-TTzpt6JDtO3uBjM14j6BzV4SHgxLiTkAuZiEfDIEjzcu0UGnfGSLuGnD53dLSl0GPduZgczz~sTHqQpo18qJawpjQ4EYQ__&Key-Pair-Id=K1C32MN3WQ7CAV" type="video/mp4">
+          </video>
+          <div class="model-play-overlay">▶</div>
+        </div>
+        <div class="model-info">
+          <h3 class="model-name">Valentina Mendoza</h3>
+          <p class="model-meta">23 years • Latina • Blonde hair</p>
+          <p class="model-bio">I'm a wedding planner by day, but at night, I'm a total slut. I love spontaneous, forbidden encounters. Let's explore ou...</p>
+          <div class="model-tags">
+            <span class="model-tag">petite</span><span class="model-tag">latina</span><span class="model-tag">dominant</span>
+          </div>
+          <a href="https://swipey.ai/characters/valentina_mendoza" class="model-cta" target="_blank" rel="nofollow sponsored">Chat with Valentina</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+// Auto-play video on hover
+(function() {
+  const cards = document.querySelectorAll('.model-card');
+  cards.forEach(card => {
+    const video = card.querySelector('video');
+    const overlay = card.querySelector('.model-play-overlay');
+    if (!video) return;
+    
+    card.addEventListener('mouseenter', () => {
+      video.play().catch(() => {});
+      if (overlay) overlay.style.opacity = '0';
+    });
+    card.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0;
+      if (overlay) overlay.style.opacity = '1';
+    });
+    
+    // Mobile: tap to play
+    card.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        if (video.paused) {
+          video.play().catch(() => {});
+          if (overlay) overlay.style.opacity = '0';
+        } else {
+          video.pause();
+          if (overlay) overlay.style.opacity = '1';
+        }
+      }
+    });
+  });
+})();
+
+</script>
+
 </body>
 </html>

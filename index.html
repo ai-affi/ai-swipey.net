@@ -51,11 +51,15 @@ a:hover{color:var(--accent-magenta)}
 .btn-primary{background:var(--gradient-cta);color:#fff;padding:10px 24px;border-radius:9999px;font-weight:600;border:none;cursor:pointer;font-size:0.95rem}
 .btn-primary:hover{filter:brightness(1.1);color:#fff}
 .btn-large{padding:14px 36px;font-size:1.05rem}
-.hero{background:var(--gradient-bg);padding:60px 0 40px;text-align:center}
-.hero h1{font-size:3rem;font-weight:800;color:var(--text-primary);letter-spacing:-1.5px;margin-bottom:16px;max-width:700px;margin-left:auto;margin-right:auto}
+.hero{background:var(--gradient-bg);padding:60px 0 40px}
+.hero-inner{display:flex;align-items:center;gap:48px;max-width:1200px;margin:0 auto;padding:0 20px}
+.hero-content{flex:1;text-align:left}
+.hero-video-side{flex:1;max-width:520px}
+.hero-video-side video{width:100%;display:block;border-radius:16px;box-shadow:0 25px 80px rgba(139,74,242,0.2)}
+.hero h1{font-size:2.8rem;font-weight:800;color:var(--text-primary);letter-spacing:-1.5px;margin-bottom:16px;max-width:600px}
 .hero h1 span{color:var(--accent-purple)}
-.hero-subtitle{font-size:1.25rem;color:var(--text-muted);max-width:600px;margin:0 auto 32px}
-.hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.hero-subtitle{font-size:1.2rem;color:var(--text-muted);max-width:500px;margin:0 0 32px}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:0}
 .btn-secondary{background:transparent;color:var(--accent-magenta);border:2px solid rgba(177,76,238,0.3);padding:10px 24px;border-radius:9999px;font-weight:600;cursor:pointer;font-size:0.95rem}
 .btn-secondary:hover{border-color:var(--accent-magenta);background:rgba(177,76,238,0.1)}
 .hero-video{width:100%;max-width:720px;margin:0 auto;border-radius:16px;overflow:hidden;box-shadow:0 25px 80px rgba(139,74,242,0.2)}
@@ -120,6 +124,10 @@ a:hover{color:var(--accent-magenta)}
 @media(max-width:768px){
 .hero h1{font-size:2rem}
 .hero-subtitle{font-size:1.05rem}
+.hero-inner{flex-direction:column-reverse}
+.hero-content{text-align:center}
+.hero-video-side{max-width:100%}
+.hero-cta{justify-content:center}
 .features-grid{grid-template-columns:1fr}
 .models-grid{grid-template-columns:1fr}
 .pref-options{grid-template-columns:1fr}
@@ -193,17 +201,19 @@ a:hover{color:var(--accent-magenta)}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="container">
-    <h1>Create Your Perfect <span>AI Girlfriend</span> on Swipey AI</h1>
-    <p class="hero-subtitle">Swipey AI is the ultimate AI companion platform. Design her look, define her personality, and build a real connection through chat, voice, and images.</p>
-    <div class="hero-cta">
-      <button class="btn-primary btn-large" data-open-modal>Start Chatting Free</button>
-      <a href="https://ai-nudify.net" class="btn-secondary" rel="nofollow">Explore AI Nudify</a>
-    </div>
-    <div class="hero-video">
+  <div class="hero-inner">
+    <div class="hero-video-side">
       <video autoplay loop muted playsinline poster="/images/hero-poster.jpg">
         <source src="/videos/hero.mp4" type="video/mp4">
       </video>
+    </div>
+    <div class="hero-content">
+      <h1>Create Your Perfect <span>AI Girlfriend</span> on Swipey AI</h1>
+      <p class="hero-subtitle">Swipey AI is the ultimate AI companion platform. Design her look, define her personality, and build a real connection through chat, voice, and images.</p>
+      <div class="hero-cta">
+        <button class="btn-primary btn-large" data-open-modal>Start Chatting Free</button>
+        <a href="https://ai-nudify.net" class="btn-secondary" rel="nofollow">Explore AI Nudify</a>
+      </div>
     </div>
   </div>
 </section>

@@ -28,7 +28,17 @@
     const overlay = document.getElementById('modal-overlay');
     const closeBtn = document.getElementById('modal-close');
 
-    // Open modal
+    // Auto-open modal after 3 seconds on first visit
+    const hasSeenModal = sessionStorage.getItem('swipey_modal_seen');
+    if (!hasSeenModal && modal && overlay) {
+      setTimeout(function() {
+        modal.classList.add('active');
+        overlay.classList.add('active');
+        sessionStorage.setItem('swipey_modal_seen', '1');
+      }, 3000);
+    }
+
+    // Open modal on CTA click (fallback)
     document.querySelectorAll('[data-open-modal]').forEach(function(btn) {
       btn.addEventListener('click', function(e) {
         e.preventDefault();
@@ -46,7 +56,7 @@
     if (closeBtn) closeBtn.addEventListener('click', closeModal);
     if (overlay) overlay.addEventListener('click', closeModal);
 
-    // Preference buttons
+    // Preference buttons → affiliate link
     document.querySelectorAll('[data-preference]').forEach(function(btn) {
       btn.addEventListener('click', function() {
         const pref = this.dataset.preference;
